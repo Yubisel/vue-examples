@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>(v-for) - (v-if) example</title>
+
+    <link rel="stylesheet" href="./three_party/bootstrap/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container" id="app">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="pt-2 pb-3 text-center bg-dark text-light">{{title}}</h3>
+            </div>
+            <div class="col-12">
+                <a href="/" class="btn btn-sm btn-success">Volver</a>
+            </div>
+            <div class="col-6 offset-3">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">
+                            {{inputText}}
+                        </label>
+                        <input type="email" v-model="inputText" class="form-control">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./three_party/vue/vue.js"></script>
+    <script src="./js/v-model.js"></script>
+</body>
+
+</html>

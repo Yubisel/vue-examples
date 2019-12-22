@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso VueJs</title>
+
+    <link rel="stylesheet" href="./three_party/bootstrap/bootstrap.min.css">
+</head>
+
+<body>
+
+    <main id="app">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <h1>Agregar notas</h1>
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" class="form-control" v-model="name">
+                    <label for="avg">Promedio</label>
+                    <input type="number" name="avg" class="form-control" v-model.number="avg">
+                    <input type="button" value="Guardar" class="btn btn-success" @click="addNote">
+                </div>
+                <div class="col-12 col-md-6">
+                    <h1>Lista de notas</h1>
+                    <table class="table">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Promdeio</th>
+                        </tr>
+                        <tr v-for="student in studentsList" v-bind:style="student.status===false?'color:red':''">
+                            <td v-text="student.name"></td>
+                            <td v-text="student.avg"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./three_party/vue/vue.js"></script>
+    <script src="./js/add_to_list.js"></script>
+</body>
+
+</html>

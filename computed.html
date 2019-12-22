@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>computed example</title>
+
+    <link rel="stylesheet" href="./three_party/bootstrap/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container" id="app">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="pt-2 pb-3 text-center bg-dark text-light">{{title}}</h3>
+            </div>
+            <div class="col-12">
+                <a href="/" class="btn btn-sm btn-success">Volver</a>
+            </div>
+            <div class="col-6 offset-3">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control form-control-sm" placeholder="Fruit name" v-model="fruitName" @keyup.enter="addFruit">
+                        <div class="input-group-append">
+                            <button class="btn btn-sm btn-success" type="button" @click="addFruit">Add</button>
+                        </div>
+                    </div>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" v-for="fruit of fruits">
+                        <div class="form-row">
+                            <div class="col-1">
+                                <button @click="fruit.cant++" class="btn btn-sm btn-success">+</button>
+                            </div>
+                            <div class="col-3">
+                                <input type="text" v-model.number="fruit.cant" class="form-control form-control-sm">
+                            </div>
+                            <div class="col-8">
+                                {{fruit.name}}
+                                <small class="form-text text-muted" v-if="fruit.cant === 0">Out of stock.</small>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Total: </b>{{calcTotal}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="./three_party/vue/vue.js"></script>
+    <script src="./js/computed.js"></script>
+</body>
+
+</html>

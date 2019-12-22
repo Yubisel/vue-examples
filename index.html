@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Vue</title>
+
+    <link rel="stylesheet" href="./three_party/bootstrap/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container" id="app">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="pt-2 pb-3 text-center bg-dark text-light">{{title}}</h2>
+            </div>
+            <div class="col-3 my-3" v-for="example in examples">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="text-center">
+                            {{example.title}}
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <a :href="example.url" class="btn btn-sm btn-block btn-success">go to example</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./three_party/vue/vue.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

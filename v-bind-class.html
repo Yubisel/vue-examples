@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Vue</title>
+
+    <link rel="stylesheet" href="./three_party/bootstrap/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container" id="app">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="pt-2 pb-3 text-center bg-dark text-light">{{title}}</h2>
+            </div>
+            <div class="col-12">
+                <a href="/" class="btn btn-sm btn-success">Volver</a>
+            </div>
+            <div class="col-6 offset-3">
+                <div class="p-3" :class="['text-white', background]">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae corrupti possimus nostrum mollitia doloremque eum recusandae, totam fugiat. Quae exercitationem laudantium id possimus tenetur temporibus ex, quo assumenda illum quis.
+                    </p>
+                </div>
+
+                <input type="text" v-model="background" class="form-control my-3">
+
+                <div class="p-3 text-white" :class="{'bg-info' : color, 'bg-danger' : !color}">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae corrupti possimus nostrum mollitia doloremque eum recusandae, totam fugiat. Quae exercitationem laudantium id possimus tenetur temporibus ex, quo assumenda illum quis.
+                    </p>
+                </div>
+
+                <input type="button" @click="color = !color" class="btn btn-success my-3" value="click me">
+            </div>
+        </div>
+    </div>
+    <script src="./three_party/vue/vue.js"></script>
+    <script src="./js/v-bind-class.js"></script>
+</body>
+
+</html>

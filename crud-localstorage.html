@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CRUD localStorage</title>
+
+    <link rel="stylesheet" href="./three_party/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./three_party/fontawesome/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container" id="app">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="pt-2 pb-3 text-center bg-dark text-light">{{title}}</h3>
+            </div>
+            <div class="col-12">
+                <a href="/" class="btn btn-sm btn-success">Volver</a>
+            </div>
+            <div class="col-6 offset-3">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-control-sm" placeholder="Task name" v-model="taskName"
+                        @keyup.enter="addTask">
+                    <div class="input-group-append">
+                        <button class="btn btn-sm btn-success" type="button" @click="addTask">Add</button>
+                    </div>
+                </div>
+
+                <div class="alert alert-danger d-flex justify-content-between align-items-center" v-for="task of tasks">
+                    <div>
+                        {{task.name}}
+                    </div>
+                    <div>
+                        <a href="#">
+                            <i class="fas fa-pen"></i>
+                        </a>
+                        &nbsp;
+                        <a href="#">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./three_party/vue/vue.js"></script>
+    <script src="./js/crud-localstorage.js"></script>
+</body>
+
+</html>
