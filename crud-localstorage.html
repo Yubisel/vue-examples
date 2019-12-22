@@ -30,16 +30,18 @@
                     </div>
                 </div>
 
-                <div class="alert alert-danger d-flex justify-content-between align-items-center" v-for="task of tasks">
+                <div class="alert d-flex justify-content-between align-items-center" 
+                v-for="(task, index) of tasks"
+                :class="{'alert-success': task.status, 'alert-danger': !task.status}">
                     <div>
                         {{task.name}}
                     </div>
                     <div>
-                        <a href="#">
-                            <i class="fas fa-pen"></i>
+                        <a href="#" @click="completeTask(index)">
+                            <i class="fas fa-check"></i>
                         </a>
                         &nbsp;
-                        <a href="#">
+                        <a href="#" @click="deleteTask(index)">
                             <i class="fas fa-trash"></i>
                         </a>
                     </div>
