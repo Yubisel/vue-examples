@@ -21,12 +21,13 @@
                 <a href="/" class="btn btn-sm btn-success">Volver</a>
             </div>
             <div class="col-6 offset-3">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control form-control-sm" placeholder="Fruit name" v-model="fruitName" @keyup.enter="addFruit">
-                        <div class="input-group-append">
-                            <button class="btn btn-sm btn-success" type="button" @click="addFruit">Add</button>
-                        </div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-control-sm" placeholder="Fruit name" v-model="fruitName"
+                        @keyup.enter="addFruit">
+                    <div class="input-group-append">
+                        <button class="btn btn-sm btn-success" type="button" @click="addFruit">Add</button>
                     </div>
+                </div>
 
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item" v-for="fruit of fruits">
