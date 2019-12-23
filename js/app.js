@@ -20,6 +20,10 @@ var app = new Vue({
                 url: './computed-2.html'
             },
             {
+                title: 'computed 3',
+                url: './computed-3.html'
+            },
+            {
                 title: 'v-bind:class',
                 url: './v-bind-class.html'
             },
