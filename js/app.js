@@ -30,6 +30,10 @@ var app = new Vue({
             {
                 title: 'CRUD localStorage',
                 url: './crud-localstorage.html'
+            },
+            {
+                title: 'Vue Lifecycle',
+                url: './lifecycle.html'
             }
         ]
     }
