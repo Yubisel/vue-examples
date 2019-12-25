@@ -34,6 +34,14 @@ var app = new Vue({
             {
                 title: 'Vue Lifecycle',
                 url: './lifecycle.html'
+            },
+            {
+                title: 'components basics',
+                url: './components.html'
+            },
+            {
+                title: 'cmp comunication',
+                url: './components-comunication.html'
             }
         ]
     }

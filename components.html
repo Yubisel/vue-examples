@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>lifecycle example</title>
+    <title>components basics example</title>
 
     <link rel="stylesheet" href="./three_party/bootstrap/bootstrap.min.css">
 </head>
@@ -21,18 +21,33 @@
                 <a href="/" class="btn btn-sm btn-success">Volver</a>
             </div>
             <div class="col-6 offset-3">
-                <ul class="list-group list-group-flush">
-                    <li  class="list-group-item" v-for="fruit of fruits">
-                        {{fruit.cant}} - {{fruit.name}}
-                        <span v-if="fruit.cant === 0">Without stock</span>
-                    </li>
-                </ul>
+                <saludo></saludo>
             </div>
         </div>
     </div>
 
     <script src="./three_party/vue/vue.js"></script>
-    <script src="./js/lifecycle.js"></script>
+    <script>
+    
+    Vue.component('saludo', {
+        template: `
+        <h1>{{hi}}</h1>
+        `,
+        data(){
+            return {
+                hi: 'Hola desde componente de vue'
+            }
+        }
+    });
+
+    new Vue({
+        el: '#app',
+        data: {
+            title: 'components basics'
+        }
+    })
+
+    </script>
 </body>
 
 </html>
