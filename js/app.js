@@ -46,6 +46,10 @@ var app = new Vue({
             {
                 title: 'cmp comunication',
                 url: './components-comunication-2.html'
+            },
+            {
+                title: 'vuex',
+                url: './vuex/index.html'
             }
         ]
     }
