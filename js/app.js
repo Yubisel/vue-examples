@@ -50,6 +50,10 @@ var app = new Vue({
             {
                 title: 'vuex',
                 url: './vuex/index.html'
+            },
+            {
+                title: 'vuex mapstate',
+                url: './vuex/mapstate.html'
             }
         ]
     }
