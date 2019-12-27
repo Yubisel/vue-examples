@@ -52,12 +52,16 @@ var app = new Vue({
                 url: './vuex/index.html'
             },
             {
-                title: 'vuex mapstate',
+                title: 'vuex mapState',
                 url: './vuex/mapstate.html'
             },
             {
-                title: 'vuex mapmutations',
+                title: 'vuex mapMutations',
                 url: './vuex/mapmutations.html'
+            },
+            {
+                title: 'vuex mapActions',
+                url: './vuex/mapactions.html'
             }
         ]
     }
