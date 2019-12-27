@@ -54,6 +54,10 @@ var app = new Vue({
             {
                 title: 'vuex mapstate',
                 url: './vuex/mapstate.html'
+            },
+            {
+                title: 'vuex mapmutations',
+                url: './vuex/mapmutations.html'
             }
         ]
     }
